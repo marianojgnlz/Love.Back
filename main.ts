@@ -160,5 +160,5 @@ app.use(async (context) => {
   });
 });
 
-console.log("Listening at http://localhost:" + port);
-await app.listen(`${ip}:${port}`);
+console.log("Listening at http://localhost:" + argPort ? Number(argPort) : DEFAULT_PORT);
+await app.listen(`${argPort ? Number(argPort) : DEFAULT_PORT}`);
